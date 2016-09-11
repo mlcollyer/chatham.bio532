@@ -19,6 +19,7 @@
 #' @section bio532 TOC:
 #' chatham.bio532-package
 NULL
+
 #' cigarett data from Pagano and Gauvreau 
 #'
 #' @name cigarett
