@@ -1,6 +1,5 @@
 Package: chatham.biol532
 Date: 2016-09-09
-Type: Package
 Title: Statistical analyses especially designed for BIO532, Biostatistics, at Chatham University
 Version: 0.0.1
 Author: Michael Collyer
@@ -13,30 +12,7 @@ Description: Functions in this package allow one to employ the panoply of common
 #' are presented in a logical style, consistent with developing appropriate interpretations.  This package is designed to help 
 #' BIO532 students navigate the BIO532 course, but it should also have general appeal.
 License: GPL (>= 2)
-URL: http://geomorphr.github.io/geomorph/
-Packaged: https://github.com/mlcollyer/chathamBIO532
+Packaged: https://github.com/mlcollyer/chatham.bio532
 Repository: github
-Date/Publication: 
 RoxygenNote: 5.0.1
 NeedsCompilation: no
-
-Package: pkgname
-Version: 0.5-1
-Date: 2015-01-01
-Title: My First Collection of Functions
-Authors@R: c(person("Joe", "Developer", role = c("aut", "cre"),
-		     email = "Joe.Developer@some.domain.net"),
-	      person("Pat", "Developer", role = "aut"),
-	      person("A.", "User", role = "ctb",
-		     email = "A.User@whereever.net"))
-Author: Joe Developer [aut, cre],
-  Pat Developer [aut],
-  A. User [ctb]
-Maintainer: Joe Developer <Joe.Developer@some.domain.net>
-Depends: R (>= 3.1.0), nlme
-Suggests: MASS
-Description: A (one paragraph) description of what
-  the package does and why it may be useful.
-License: GPL (>= 2)
-URL: https://www.r-project.org, http://www.another.url
-BugReports: https://pkgname.bugtracker.url
