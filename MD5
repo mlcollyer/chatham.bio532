@@ -1,4 +1,8 @@
 7db72b7e01004751c5cf9d9eb2c9122c *chatham.bio532.Rproj
 3f21e47bbae76d9614bf30eb9cc9d0af *Data/cigarett.rda
-f02ea9b77d526a256c66643aa8eaaab5 *DESCRIPTION
-4513bf35f81a1ea37452100d25362abb *R/support.code.r
+a30796d053f89de5f5b2d0668c54b722 *DESCRIPTION
+43edb6bd7cebffcce66651be3e941742 *index.Rhtml
+39e7fb5b96a91b41978629c7adbd1faf *man/chatham.bio532-package.Rd
+8d38d7d932986b38fc61e471f317cdd0 *man/cigarett.Rd
+a7d6198c5ea562b3c87c43ad804d5b7e *NAMESPACE
+372e6ed964b29390cad72404b4ec0b7d *R/support.code.r
