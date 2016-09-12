@@ -1,6 +1,6 @@
-#' @name chathamBIO532-package
+#' @name chatham.bio532-package
 #' @docType package
-#' @aliases chathamBIO532
+#' @aliases chatham.bio532
 #' @title Statistical analyses especially designed for BIO532, Biostatistics, at Chatham University
 #' @author Michael Collyer
 #' 
@@ -14,7 +14,7 @@
 #' @import stats
 #' @import utils
 #' @import graphics
-#' @import gemorph
+#' @import geomorph
 #' 
 #' @section BIO532 TOC:
 #' BIO532-package
