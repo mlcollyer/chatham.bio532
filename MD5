@@ -69,7 +69,7 @@ ac295ac9bbfac7cb6b569e3261647a34 *man/twenty.Rd
 68f5cd2c93a64e5a778e3117071e702e *man/us1940.Rd
 24aa275d3c82bab40c5f603011198ca6 *man/water.Rd
 a7d6198c5ea562b3c87c43ad804d5b7e *NAMESPACE
-23a8838fa46bcea01d2da6da37fe9c83 *R scripts/bio532.rscript.1.introduction.to.R
-d381f62c83a8abaf34fc7106491125d2 *R scripts/bio532.rscript.2.install.packages.R
-f069be0cb386702688bfb3911c09830e *R scripts/bio532.rscript.3.lodaing.data.R
+23a8838fa46bcea01d2da6da37fe9c83 *R_scripts/bio532.rscript.1.introduction.to.R
+d381f62c83a8abaf34fc7106491125d2 *R_scripts/bio532.rscript.2.install.packages.R
+f069be0cb386702688bfb3911c09830e *R_scripts/bio532.rscript.3.lodaing.data.R
 647e546021c3dd5f9375771ced0d0c3b *R/support.code.r
