@@ -14,7 +14,7 @@
 #' @import stats
 #' @import utils
 #' @import graphics
-#' @import geomorph
+#' @import MASS
 #' 
 #' @section BIO532 TOC:
 #' BIO532-package
