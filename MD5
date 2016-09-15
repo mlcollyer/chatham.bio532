@@ -60,9 +60,9 @@ b5f90a47a13cefe2f727ff16db19e725 *man/miner.Rd
 929c027e32178616ea6c2693de99e4bb *man/multisample.Rd
 7dba5d0cf85483b19627837a37c8add1 *man/nurshome.Rd
 319434a9ce629289ff2014c9f9b0a309 *man/plot.multisample.Rd
-6119cb8ee2047a2c9500bcc3f01bd94a *man/prgram.Rd
 7cbc12c23b1b9d6d2ece1e3871b5ec60 *man/print.multisample.Rd
 45b6c96f89e2bb5621610584126c36a9 *man/prison.Rd
+9ed0e899d9741bd9f5be4e0b4bb0de52 *man/program.Rd
 ee045c8d42cfe11444c0105fa1659f8e *man/serzinc.Rd
 753ff2cd892ed82dd19d14479159ee0b *man/stenosis.Rd
 543245f02f2c6f8e30b78aa31ade7d9d *man/summary.multisample.Rd
@@ -77,5 +77,5 @@ f069be0cb386702688bfb3911c09830e *R_scripts/bio532.rscript.3.loading.data.R
 1cbafc2b6c1a0cea1ad04c1899584387 *R_scripts/bio532.rscript.4.probability.distributions.R
 8157bdd1543a20917f3229f435d08f31 *R_scripts/bio532.rscript.5.central.limit.theorem.R
 30077a06dd81af3a537b63213c074d48 *R/multisample.r
-a0832f84c92086285bf39876c5099a6d *R/support.code.r
+7729247b0fe57c55ee92e501da48f211 *R/support.code.r
 4a2eb21108cdc22fa257c6f325dc6bac *R/utils.r

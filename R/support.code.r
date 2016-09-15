@@ -293,7 +293,7 @@ NULL
 
 #' program data from Pagano and Gauvreau 
 #'
-#' @name prgram
+#' @name program
 #' @docType data
 #' @references Principles of Biostatistics, 2nd ed., 
 #' by Marcello Pagano and Kimberlee Gauvreau (2000) 
