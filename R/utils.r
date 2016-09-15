@@ -63,3 +63,29 @@ summary.multisample <- function(object, ...) {
   x <- object
   print.multisample(x, ...)
 }
+
+#' Plot Function for chatham.bio532
+#' 
+#' @param x plot object (from \code{\link{gpagen}})
+#' @param ... other arguments passed to plotAllSpecimens (see hist)
+#' @export
+#' @author Michael Collyer
+#' @keywords utilities
+#' @keywords visualization
+plot.multisample <- function(x, ...){
+  if(length(x$mu) > 1) stop("Plot option is only available for univarite data at this time")
+  if(is.null(x$means[[1]])) stop("CLT must be true for plotting functions")
+  dots <- list(...)
+  col <- dots$col
+  breaks <- dots$breaks
+  if(is.null(breaks)) breaks <- "Sturges"
+  X <- x$means
+  hist(X, main = "Sampling Distribution of means", breaks=breaks, 
+       col=col, xlab = "Means", freq=FALSE)
+  xx <- density(X)$x
+  d <- dnorm(xx, mean = x$mu, sd=x$expected.se)
+  points(xx,d, type="l", col="red", lwd=2)
+  cat("The red curve is based on the Central Limit Theorem, 
+      and the true population mean and standard deviation")
+}
+
