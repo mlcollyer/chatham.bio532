@@ -70,12 +70,12 @@ ac295ac9bbfac7cb6b569e3261647a34 *man/twenty.Rd
 092f3f5681652f8c1dafc382cc48222b *man/unicef.Rd
 68f5cd2c93a64e5a778e3117071e702e *man/us1940.Rd
 24aa275d3c82bab40c5f603011198ca6 *man/water.Rd
-bc6d60c5e79974f9713848a134abe46a *NAMESPACE
+6b69d0b1f95d2afa4bfcff8eef3862cc *NAMESPACE
 23a8838fa46bcea01d2da6da37fe9c83 *R_scripts/bio532.rscript.1.introduction.to.R
 d381f62c83a8abaf34fc7106491125d2 *R_scripts/bio532.rscript.2.install.packages.R
 f069be0cb386702688bfb3911c09830e *R_scripts/bio532.rscript.3.loading.data.R
 1cbafc2b6c1a0cea1ad04c1899584387 *R_scripts/bio532.rscript.4.probability.distributions.R
 8157bdd1543a20917f3229f435d08f31 *R_scripts/bio532.rscript.5.central.limit.theorem.R
 30077a06dd81af3a537b63213c074d48 *R/multisample.r
-ff183fe0fa621abc5dbd9a4d7175b771 *R/support.code.r
+a0832f84c92086285bf39876c5099a6d *R/support.code.r
 4a2eb21108cdc22fa257c6f325dc6bac *R/utils.r
