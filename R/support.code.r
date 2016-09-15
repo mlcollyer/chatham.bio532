@@ -10,9 +10,6 @@
 #' diagnostics for tests are available, and results/output are presented in a logical style, consistent with 
 #' developing appropriate interpretations.  This package is designed to help BIO532 students navigate the BIO532
 #' course, but it should also have general appeal.
-#'  
-#' @import stats
-#' @import MASS
 #' 
 #' @section BIO532 TOC:
 #' BIO532-package
