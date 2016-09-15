@@ -12,8 +12,6 @@
 #' course, but it should also have general appeal.
 #'  
 #' @import stats
-#' @import utils
-#' @import graphics
 #' @import MASS
 #' 
 #' @section BIO532 TOC:
