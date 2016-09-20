@@ -4,7 +4,7 @@
 
 #' Print/Summary Function for chantahm.bio532
 #' 
-#' @param x print/summary object (from \code{\link{gpagen}})
+#' @param x print/summary object (from \code{\link{multisample}})
 #' @param ... other arguments passed to print/summary
 #' @export
 #' @author Michael Collyer
@@ -54,7 +54,7 @@ print.multisample <- function (x, ...) {
 
 #' Print/Summary Function for chatham.bio532
 #' 
-#' @param object print/summary object (from \code{\link{gpagen}})
+#' @param object print/summary object (from \code{\link{multisample}})
 #' @param ... other arguments passed to print/summary
 #' @export
 #' @author Michael Collyer
@@ -89,3 +89,73 @@ plot.multisample <- function(x, ...){
       and the true population mean and standard deviation")
 }
 
+## confidence.int
+
+#' Print/Summary Function for chantahm.bio532
+#' 
+#' @param x print/summary object (from \code{\link{confidence.int}})
+#' @param ... other arguments passed to print/summary
+#' @export
+#' @author Michael Collyer
+#' @keywords utilities
+print.confidence.int <- function (x, ...) {
+  cat("\n\n")
+  cat("Confidence interval based on bootstrap resampling procedure")
+  cat("\n\n")
+  cat(paste(x$iter, "Permutations used"))
+  cat("\n\n")
+  print(x$conf.int)
+  cat("\n\n\n")
+  cat("Confidence interval based on theoretical expectation (t-distibution)")
+  y <- x$random.samples[[1]]
+  s <- sd(y); ym <- mean(y); n <- x$n; alpha <- x$alpha; tc <- qt(1-alpha/2, n-1)
+  lcl <- ym - tc*s/sqrt(n); ucl <- ym + tc*s/sqrt(n)
+  CI <- c(lcl, ucl); names(CI) <- names(x$conf.int)
+  cat("\n\n")
+  print(CI)
+  cat("\n\n")
+  invisible(x)
+}
+
+#' Print/Summary Function for chatham.bio532
+#' 
+#' @param object print/summary object (from \code{\link{confidence.int}})
+#' @param ... other arguments passed to print/summary
+#' @export
+#' @author Michael Collyer
+#' @keywords utilities
+summary.confidence.int <- function(object, ...) {
+  x <- object
+  print.confidence.int(x, ...)
+}
+
+#' Plot Function for chatham.bio532
+#' 
+#' @param x plot object (from \code{\link{confidence.int}})
+#' @param ... other arguments passed to plotAllSpecimens (see hist)
+#' @export
+#' @author Michael Collyer
+#' @keywords utilities
+#' @keywords visualization
+plot.confidence.int <- function(x, ...){
+  dots <- list(...)
+  col <- dots$col
+  breaks <- dots$breaks
+  if(is.null(breaks)) breaks <- "Sturges"
+  X <- x$means
+  n <- x$n; alpha <- x$alpha
+  par(mfcol=c(1,2))
+  hist(X, main = "Sampling Distribution of means", breaks=breaks, 
+       col=col, xlab = "Means", freq=FALSE)
+  CI <- x$conf.int
+  abline(v=CI[1], col="dark blue"); abline(v=CI[2], col="dark blue")
+  Z <- scale(X)
+  hist(scale(X), main = "Standardized Distribution of means", breaks=breaks, 
+       col=col, xlab = "Means", freq=FALSE)
+  abline(v=qt(alpha/2, n-1), col="dark blue"); 
+  abline(v=qt(1-alpha/2, n-1), col="dark blue")
+  xx <- density(Z)$x
+  d <- dt(xx, x$n-1)
+  points(xx,d, type="l", col="red", lwd=2)
+  cat("The red curve is based on the t-distribution")
+}
