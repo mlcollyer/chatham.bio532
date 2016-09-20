@@ -43,7 +43,7 @@ edbe746d65dba8379f72b7f3de1c4f3f *man/brate.Rd
 887d7e2dcc57dcd7aeb184b3fab3a7a7 *man/cad.Rd
 39e7fb5b96a91b41978629c7adbd1faf *man/chatham.bio532-package.Rd
 8d38d7d932986b38fc61e471f317cdd0 *man/cigarett.Rd
-4c843842ac968322d304c6badf701ee3 *man/confidence.int.Rd
+89ca6679fc5f8e7e00368ac438c548a7 *man/confidence.int.Rd
 08c44fa3d64b0bc3b16532ee3a4d0dbb *man/cyto.Rd
 a805ab8eb7c3a6a23f91613dcce0e71f *man/detroit.Rd
 135c9363b8a43181a1b8634d21012084 *man/diabetes.Rd
@@ -79,8 +79,8 @@ d381f62c83a8abaf34fc7106491125d2 *R_scripts/bio532.rscript.2.install.packages.R
 f069be0cb386702688bfb3911c09830e *R_scripts/bio532.rscript.3.loading.data.R
 1cbafc2b6c1a0cea1ad04c1899584387 *R_scripts/bio532.rscript.4.probability.distributions.R
 8157bdd1543a20917f3229f435d08f31 *R_scripts/bio532.rscript.5.central.limit.theorem.R
-e12e2ea4dce242aa49fe117b86e1f854 *R_scripts/bio532.rscript.6.confidence.intervals.R
+5c18f1d423b28cc421720796c0359ccf *R_scripts/bio532.rscript.6.confidence.intervals.R
 883a912a55f87e986a666843d10b5f0e *R/confidence.int.r
 30077a06dd81af3a537b63213c074d48 *R/multisample.r
 7729247b0fe57c55ee92e501da48f211 *R/support.code.r
-d6795cd7921742485b3250111e8da979 *R/utils.r
+a8606b14851b964aa0680c2c7f662390 *R/utils.r

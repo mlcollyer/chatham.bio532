@@ -9,7 +9,7 @@ confidence.int(y, alpha = 0.05, iter = 1000)
 \arguments{
 \item{y}{A vector of data}
 
-\item{alpha}{The significanc level}
+\item{alpha}{The significance level}
 
 \item{iter}{Number of resampling (bootstrap) iterations}
 }
@@ -18,7 +18,7 @@ The function returns a list of samples, means from samples, and (1-alpha)*100%
 confidence intervals.
 }
 \description{
-Function generates one-sample confidence intervals from a resampling (bootstrap) procdure
+Function generates one-sample confidence intervals from a resampling (bootstrap) procedure
 }
 \examples{
 
