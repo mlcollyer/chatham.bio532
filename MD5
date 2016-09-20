@@ -79,7 +79,13 @@ d381f62c83a8abaf34fc7106491125d2 *R_scripts/bio532.rscript.2.install.packages.R
 f069be0cb386702688bfb3911c09830e *R_scripts/bio532.rscript.3.loading.data.R
 1cbafc2b6c1a0cea1ad04c1899584387 *R_scripts/bio532.rscript.4.probability.distributions.R
 8157bdd1543a20917f3229f435d08f31 *R_scripts/bio532.rscript.5.central.limit.theorem.R
+<<<<<<< HEAD
 fbf433cddf94fefc480729b52d03bbb9 *R_scripts/bio532.rscript.6.confidence.intervals.R
+||||||| merged common ancestors
+e12e2ea4dce242aa49fe117b86e1f854 *R_scripts/bio532.rscript.6.confidence.intervals.R
+=======
+5c18f1d423b28cc421720796c0359ccf *R_scripts/bio532.rscript.6.confidence.intervals.R
+>>>>>>> b3786e98e2ed7ec17adf1c58c2f8604b5e73a330
 883a912a55f87e986a666843d10b5f0e *R/confidence.int.r
 30077a06dd81af3a537b63213c074d48 *R/multisample.r
 7729247b0fe57c55ee92e501da48f211 *R/support.code.r
