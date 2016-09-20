@@ -146,7 +146,7 @@ plot.confidence.int <- function(x, ...){
   n <- x$n; alpha <- x$alpha
   par(mfcol=c(1,2))
   hist(X, main = "Sampling Distribution of means", breaks=breaks, 
-       col=col, xlab = "Means", freq=FALSE)
+       col=col, xlab = "Means", freq=TRUE)
   CI <- x$conf.int
   abline(v=CI[1], col="dark blue"); abline(v=CI[2], col="dark blue")
   Z <- scale(X)

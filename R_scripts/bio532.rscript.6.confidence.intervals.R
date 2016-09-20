@@ -42,10 +42,10 @@ sd(Y)/sqrt(n)
 ### IMPORTANT ###
 
 # While it is all good and fun to create a population and sample from it, it is
-# a bit impractical.  In general, a population mean and standard deviation is 
+# a bit impractical.  In general, a population mean and standard deviation are 
 # unknown to us.  This is why we are sampling.
 
-# We want to knw how confident we can be that our sample comes close to estimating the 
+# We want to know how confident we can be that our sample comes close to estimating the 
 # population mean.  If we cannot go back to the population over and over, how might 
 # we do that?
 
@@ -56,80 +56,59 @@ sd(Y)/sqrt(n)
 
 # Using our sample, y
 
-sample(y, replace = TRUE)
+library(chatham.bio532)
 
-# The replace = TRUE part is important.  If FALSE, the process just shuffles the data; 
-# if TRUE, it creates a new hypothetical sample from the data
+yCI = confidence.int(y)
 
-# Let's do this many times (don't worry about code too much here)
+yCI$random.samples
+yCI$means
 
-perms = 1000
-resample = function(.) sample(y, size=n, replace = TRUE)
-y.r = lapply(1:perms, resample)
+plot(yCI)
 
-y.r # 1000 resamples of y
+# So what is a confidence interval?  
 
+# It is a set of limits on the probability that the "true" population mean
+# is found, given your sample.  Let's say we want to be 60% confident for the 
+# estimation of a population mean.  Then we are defining confidence limits
+# at the edge of sampling distribution that eliminate 40% of the possible values.
+# 70% confident; eliminate 30%; 80% confident; eliminate 20%, etc.
 
+# We seek a (1-alpha)*100% confidence interval, which means we have an alpha 
+# probability of missing the true population mean.  The more certain we want to be,
+# the larger the interval must be
 
-# Let's look at the interquartile range of the sampling distribution of means
+yCI = confidence.int(y, alpha = 0.20, iter = 10000)
+summary(yCI)
+mean(Y)
+plot(yCI, col=rgb(0.5, 0.5, 0, 0.6), breaks=50)
 
-IQR(ySamples$means)
-summary(ySamples$means)
+# Note the difference between empirical and theoretical outcomes
 
-# How do we intrpret this information?  We know that 50% of the values fall within the IQR,
-# but does that tell us anything?
+# Let's try a bigger sample
 
-# YES!
+y = sample(Y, size = 50)
 
-# Because the sampling distribution is also a probability distribution, it gives us a probability
-# of capturing the true population mean from our sampling.  We should be ~50% confident
-# that the true population mean falls within this range.
+yCI = confidence.int(y, alpha = 0.20, iter = 10000)
+summary(yCI)
+mean(Y)
+plot(yCI, col=rgb(0.5, 0.7, 0.1, 0.6), breaks=50)
 
-mean(Y) # population mean
+# surprising?  Why did things get better?
 
+# Now think about what this means for the theory?
 
-ySamples$samples
+# (1-alpha)*100% CI = sample mean +/- t-alpha/2 * sample sd/sqrt(n)
 
-# Can plot too
-plot(ySamples)
+# 95% CI the standard...
 
-# A better example... yes, 10,000 permutations!
+y = sample(Y, size = 50)
 
-ySamples = multisample(population = Y, size = n, permutations = 10000, CLT=TRUE)
-summary(ySamples)
-plot(ySamples, breaks = 50, col="dark green")
+yCI = confidence.int(y, alpha = 0.05, iter = 10000)
+summary(yCI)
+mean(Y)
+plot(yCI, col=rgb(0.1, 0.3, 1, 0.1), breaks=50)
 
-# Let's do this again with a different kind of distribution
+# -------------------------------------------------------------------------------
+# use confidence.int on your own from here
 
-Y = rpois(10000, lambda =2) # Poisson distribution
-hist(Y, col="orange") # not normal!
-
-ySamples = multisample(population = Y, size = n, permutations = 10000, CLT=TRUE)
-summary(ySamples)
-plot(ySamples, breaks = 50, col="dark orange")
-
-# Let's go crazy!
-ySamples = multisample(population = Y, size = n, permutations = 50000, CLT=TRUE)
-summary(ySamples)
-plot(ySamples, breaks = 50, col="dark orange")
-
-# Remember, a Poisson distribution is discrete, not continuous
-# Nevertheless, the CLT still holds, pretty much
-
-# Another
-
-Y = rlnorm(10000, mean = 2, sd = 0.5) # Lognormal distribution
-hist(Y, col="yellow") # not normal!
-
-ySamples = multisample(population = Y, size = n, permutations = 10000, CLT=TRUE)
-summary(ySamples)
-plot(ySamples, breaks = 50, col=" yellow")
-
-#-----------------------------------------------------------------------------------
-# Parting thoughts
-
-# 1) CLT important!  Repat, CLT important!
-# 2) Theory tells us what to expect if we were to sample a population many times
-# 3) Therefore, we can assume som ethings about statistics we estimate for population 
-# apramters.  This will be important when we wish to comapre population parameters
-# in inferrential tests.
+?confidence.int
