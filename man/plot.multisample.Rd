@@ -9,7 +9,7 @@
 \arguments{
 \item{x}{plot object (from \code{\link{multisample}})}
 
-\item{...}{other arguments passed to plotAllSpecimens (see hist)}
+\item{...}{other arguments passed to plot (see hist)}
 }
 \description{
 Plot Function for chatham.bio532

@@ -67,7 +67,7 @@ summary.multisample <- function(object, ...) {
 #' Plot Function for chatham.bio532
 #' 
 #' @param x plot object (from \code{\link{multisample}})
-#' @param ... other arguments passed to plotAllSpecimens (see hist)
+#' @param ... other arguments passed to plot (see hist)
 #' @export
 #' @author Michael Collyer
 #' @keywords utilities
@@ -132,7 +132,7 @@ summary.confidence.int <- function(object, ...) {
 #' Plot Function for chatham.bio532
 #' 
 #' @param x plot object (from \code{\link{confidence.int}})
-#' @param ... other arguments passed to plotAllSpecimens (see hist)
+#' @param ... other arguments passed to plot (see hist)
 #' @export
 #' @author Michael Collyer
 #' @keywords utilities

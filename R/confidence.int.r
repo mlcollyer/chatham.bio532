@@ -1,9 +1,9 @@
 #' Generate confidence intervals
 #'
-#' Function generates one-sample confidence intervals from a resampling (bootstrap) procdure
+#' Function generates one-sample confidence intervals from a resampling (bootstrap) procedure
 #' 
 #' @param y A vector of data
-#' @param alpha The significanc level
+#' @param alpha The significance level
 #' @param iter Number of resampling (bootstrap) iterations
 #' @export
 #' @author Michael Collyer
