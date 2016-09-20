@@ -60,7 +60,7 @@ b5f90a47a13cefe2f727ff16db19e725 *man/miner.Rd
 929c027e32178616ea6c2693de99e4bb *man/multisample.Rd
 7dba5d0cf85483b19627837a37c8add1 *man/nurshome.Rd
 6a12aad1d9930fddec54378a72c30e4a *man/plot.confidence.int.Rd
-319434a9ce629289ff2014c9f9b0a309 *man/plot.multisample.Rd
+9b660c2af28aa2d23b46fbc0e6a5de02 *man/plot.multisample.Rd
 6fb99645dd78acf5025a00b3f98b118c *man/print.confidence.int.Rd
 62a40ca018deb428dc0782dc58c10378 *man/print.multisample.Rd
 45b6c96f89e2bb5621610584126c36a9 *man/prison.Rd
@@ -83,4 +83,4 @@ e12e2ea4dce242aa49fe117b86e1f854 *R_scripts/bio532.rscript.6.confidence.interval
 2caaaa1b31d5bc98b54b1116eccfa9da *R/confidence.int.r
 30077a06dd81af3a537b63213c074d48 *R/multisample.r
 7729247b0fe57c55ee92e501da48f211 *R/support.code.r
-eadb67decb81de7009a83f1b1da10cac *R/utils.r
+13af6f1cd0a72c2b8fcbfca284b63f40 *R/utils.r

@@ -7,7 +7,7 @@
 \method{plot}{multisample}(x, ...)
 }
 \arguments{
-\item{x}{plot object (from \code{\link{gpagen}})}
+\item{x}{plot object (from \code{\link{multisample}})}
 
 \item{...}{other arguments passed to plotAllSpecimens (see hist)}
 }

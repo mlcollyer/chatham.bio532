@@ -66,7 +66,7 @@ summary.multisample <- function(object, ...) {
 
 #' Plot Function for chatham.bio532
 #' 
-#' @param x plot object (from \code{\link{gpagen}})
+#' @param x plot object (from \code{\link{multisample}})
 #' @param ... other arguments passed to plotAllSpecimens (see hist)
 #' @export
 #' @author Michael Collyer
