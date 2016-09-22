@@ -75,6 +75,7 @@ ac295ac9bbfac7cb6b569e3261647a34 *man/twenty.Rd
 24aa275d3c82bab40c5f603011198ca6 *man/water.Rd
 ca3b0eaac0e60a436caa21f97068e486 *NAMESPACE
 23a8838fa46bcea01d2da6da37fe9c83 *R_scripts/bio532.rscript.1.introduction.to.R
+7fabe104f50508ca7f98a3fee8de3380 *R_scripts/bio532.rscript.2.confidence.intervals2.R
 d381f62c83a8abaf34fc7106491125d2 *R_scripts/bio532.rscript.2.install.packages.R
 f069be0cb386702688bfb3911c09830e *R_scripts/bio532.rscript.3.loading.data.R
 1cbafc2b6c1a0cea1ad04c1899584387 *R_scripts/bio532.rscript.4.probability.distributions.R
@@ -83,4 +84,4 @@ f069be0cb386702688bfb3911c09830e *R_scripts/bio532.rscript.3.loading.data.R
 883a912a55f87e986a666843d10b5f0e *R/confidence.int.r
 30077a06dd81af3a537b63213c074d48 *R/multisample.r
 7729247b0fe57c55ee92e501da48f211 *R/support.code.r
-a8606b14851b964aa0680c2c7f662390 *R/utils.r
+1e34c5b88655d7b057f5d69dc884082c *R/utils.r

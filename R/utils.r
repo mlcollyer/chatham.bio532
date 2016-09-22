@@ -148,12 +148,13 @@ plot.confidence.int <- function(x, ...){
   hist(X, main = "Sampling Distribution of means", breaks=breaks, 
        col=col, xlab = "Means", freq=TRUE)
   CI <- x$conf.int
-  abline(v=CI[1], col="dark blue"); abline(v=CI[2], col="dark blue")
+  abline(v=CI[1], col="dark blue", lwd = 2,lty=3)
+  abline(v=CI[2], col="dark blue", lwd = 2,lty=3)
   Z <- scale(X)
   hist(scale(X), main = "Standardized Distribution of means", breaks=breaks, 
        col=col, xlab = "Means", freq=FALSE)
-  abline(v=qt(alpha/2, n-1), col="dark blue"); 
-  abline(v=qt(1-alpha/2, n-1), col="dark blue")
+  abline(v=qt(alpha/2, n-1), col="dark blue", lwd = 2,lty=3); 
+  abline(v=qt(1-alpha/2, n-1), col="dark blue", lwd = 2, lty=3)
   xx <- density(Z)$x
   d <- dt(xx, x$n-1)
   points(xx,d, type="l", col="red", lwd=2)
