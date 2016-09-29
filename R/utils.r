@@ -272,21 +272,22 @@ plot.two.sample.test <- function(x, method = c("histogram", "diagnostic"),
     vars <- x$vars
     ns <- x$group.n
     vd <- sum(vars^2/ns^2*(1/(ns-1)))
-    v <- sum(vars/ns)^2/vd
-    tc1 <- qt(1-alpha, v)
-    tc2 <- qt(1-alpha/2, v)
+    df <- sum(vars/ns)^2/vd
+    tc1 <- qt(1-alpha, df)
+    tc2 <- qt(1-alpha/2, df)
     md <- x$means[1] - x$means[2]
     y <- x$random.mean.difs
+    ts <- x$random.ts
     iter <- length(y)
     if(conf.int == "NT") {
-      uc <- 1- alpha
-      lc <- 1
-      ucl <- quantile(y, uc)
-      lcl <- -Inf
+      lc <- 1-alpha
+      uc <- 1
+      ucl <- -Inf
+      lcl <- quantile(y, lc)
     } else if(conf.int == "PT") {
-      ucl <- Inf
-      uc <-0
       lc <- alpha
+      uc <- 0
+      ucl <- Inf
       lcl <- quantile(y, lc)
     } else {
       lc <- alpha/2
@@ -295,27 +296,25 @@ plot.two.sample.test <- function(x, method = c("histogram", "diagnostic"),
       ucl <- quantile(y, uc)
     }
     dots <- list(...)
-    col <- dots$col
+    cols <- dots$col
     breaks <- dots$breaks
     if(is.null(breaks) & iter > 500)  breaks <- 50 
-    if(is.null(col)) col <- rgb(0,1,0,0.5)
+    if(is.null(cols)) cols <- rgb(0,1,0,0.5)
     par(mfcol=c(1,2))
-    hist(y, breaks=breaks, col=col, main=expression(paste(mu," marked by blue line")),
+    hist(y, breaks=breaks, col=cols, main=expression(paste(mu," marked by blue line")),
          xlab = "Random mean differences (null model)", cex.main = 0.7)
-    abline(v=mu, lwd=3, col="dark blue")
+    abline(v = mu, lwd=3, col="dark blue")
     abline(v = lcl, lwd=2, lty=3, col="red")
     abline(v = ucl, lwd=2, lty=3, col="red")
-    ts <- x$random.ts
-    hist(ts, breaks=breaks, col=col, main="observed t-stat marked by orange line", 
+    hist(ts, breaks=breaks, col=cols, main="observed t-stat marked by orange line", 
          xlab = "Random t-values (null model)", freq=F, cex.main = 0.7)
     xx = seq(round(min(ts),2), round(max(ts),2),0.01)
-    tx = dt(xx, sum(x$group.n)-2)
+    tx = dt(xx, df)
     points(xx, tx, type="l", col="dark blue", lwd=3)
-    abline(v=ts[1], lwd=3, col="dark orange") 
     if(conf.int == "NT") {
-      lcp <- alpha; ucp <- 1
+      lcp <- 0; ucp <- alpha
     } else if(conf.int == "PT") {
-      lcp <- 0; ucp <- 1 - alpha
+      lcp <- 1-alpha ; ucp <- 1
     } else {
       lcp <- alpha/2; ucp <- 1-alpha/2
     }
@@ -323,5 +322,6 @@ plot.two.sample.test <- function(x, method = c("histogram", "diagnostic"),
     uclp <- qt(ucp, v)
     abline(v = lclp, lwd=2, lty=3, col="red")
     abline(v = uclp, lwd=2, lty=3, col="red")
+    abline(v = ts[1], lwd=3, col="dark orange")
   }
 }

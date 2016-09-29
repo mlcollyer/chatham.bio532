@@ -47,8 +47,8 @@ plot(TST1, method = "hist", conf.int = "2T")
 
 TST2 <- two.sample.test(sbp ~ grmhem, data = lowbwt, alpha = 0.05, mu = 0, iter = 999)
 summary(TST2)
-plot(TST1, method = "hist", conf.int = "2T")
-plot(TST1, method = "hist", conf.int = "NT")
+plot(TST2, method = "hist", conf.int = "2T")
+plot(TST2, method = "hist", conf.int = "PT")
 }
 \author{
 Michael Collyer

@@ -32,8 +32,8 @@
 #' 
 #' TST2 <- two.sample.test(sbp ~ grmhem, data = lowbwt, alpha = 0.05, mu = 0, iter = 999)
 #' summary(TST2)
-#' plot(TST1, method = "hist", conf.int = "2T")
-#' plot(TST1, method = "hist", conf.int = "NT")
+#' plot(TST2, method = "hist", conf.int = "2T")
+#' plot(TST2, method = "hist", conf.int = "PT")
 two.sample.test <- function(f, data = NULL, alpha=0.05, mu = 0, iter = 999, seed = NULL){
   if(class(f) != "formula") stop("First argument must be a formula; e.g., y ~ x")
   form <- f 
