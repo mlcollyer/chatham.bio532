@@ -11,8 +11,8 @@
 #' developing appropriate interpretations.  This package is designed to help BIO532 students navigate the BIO532
 #' course, but it should also have general appeal.
 #' 
-#' @section BIO532 TOC:
-#' BIO532-package
+#' @section chatham.bio532 TOC:
+#' chatham.bio532-package
 NULL
 
 #' actions data from Pagano and Gauvreau 
@@ -372,4 +372,37 @@ NULL
 
 # support functions
 
+# perm.index
 
+perm.index <- function(n, iter, seed=NULL){
+  if(is.null(seed)) seed = iter else
+    if(seed == "random") seed = sample(1:iter,1) else
+      if(!is.numeric(seed)) seed = iter
+      set.seed(seed)
+      ind <- c(list(1:n),(Map(function(x) sample.int(n,n), 1:iter)))
+      rm(.Random.seed, envir=globalenv())
+      ind
+}
+
+boot.index <- function(n, iter, seed=NULL){
+  if(is.null(seed)) seed = iter else
+    if(seed == "random") seed = sample(1:iter,1) else
+      if(!is.numeric(seed)) seed = iter
+      set.seed(seed)
+      ind <- c(list(1:n),(Map(function(x) sample.int(n, n, replace = TRUE), 1:iter)))
+      rm(.Random.seed, envir=globalenv())
+      ind
+}
+
+boot2.index <- function(n1,n2, iter, seed=NULL){
+  if(is.null(seed)) seed = iter else
+    if(seed == "random") seed = sample(1:iter,1) else
+      if(!is.numeric(seed)) seed = iter
+      set.seed(seed)
+      ind <- c(list(1:n1),(Map(function(x) sample.int(n1, n1, replace = TRUE), 1:iter)))
+      ind2 <- c(list(1:n2),(Map(function(x) sample.int(n2, n2, replace = TRUE), 1:iter)))
+      ind2 <- Map(function(x) x+n1, ind2)
+      ind <- Map(function(x,y) c(x,y), ind, ind2)
+      rm(.Random.seed, envir=globalenv())
+      ind
+}

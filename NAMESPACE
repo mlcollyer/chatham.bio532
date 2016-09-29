@@ -2,9 +2,13 @@
 
 S3method(plot,confidence.int)
 S3method(plot,multisample)
+S3method(plot,two.sample.test)
 S3method(print,confidence.int)
 S3method(print,multisample)
+S3method(print,two.sample.test)
 S3method(summary,confidence.int)
 S3method(summary,multisample)
+S3method(summary,two.sample.test)
 export(confidence.int)
 export(multisample)
+export(two.sample.test)

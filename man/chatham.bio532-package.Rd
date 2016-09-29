@@ -13,9 +13,9 @@ diagnostics for tests are available, and results/output are presented in a logic
 developing appropriate interpretations.  This package is designed to help BIO532 students navigate the BIO532
 course, but it should also have general appeal.
 }
-\section{BIO532 TOC}{
+\section{chatham.bio532 TOC}{
 
-BIO532-package
+chatham.bio532-package
 }
 \author{
 Michael Collyer
