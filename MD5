@@ -85,8 +85,9 @@ f069be0cb386702688bfb3911c09830e *R_scripts/bio532.rscript.3.loading.data.R
 8157bdd1543a20917f3229f435d08f31 *R_scripts/bio532.rscript.5.central.limit.theorem.R
 09b7eac1af284ca8702a415313b2b921 *R_scripts/bio532.rscript.6.confidence.intervals.R
 7fabe104f50508ca7f98a3fee8de3380 *R_scripts/bio532.rscript.7.confidence.intervals2.R
+0b90a59fafc734a9d4860c977808f050 *R_scripts/bio532.rscript.8.two-sample.tests.R
 883a912a55f87e986a666843d10b5f0e *R/confidence.int.r
 30077a06dd81af3a537b63213c074d48 *R/multisample.r
 adca70bb6202fda2f305979e80438c5d *R/support.code.r
 03cce10a250d271712800d8842c5a499 *R/two.sample.test.r
-69ec17b9437105e6cca86f0a477c771e *R/utils.r
+6ed0cddffa4f0c19dfbaf007ae0c6edf *R/utils.r
