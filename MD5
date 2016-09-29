@@ -73,7 +73,7 @@ ee045c8d42cfe11444c0105fa1659f8e *man/serzinc.Rd
 3b4eb7328a63902527bf92d10e96d138 *man/summary.multisample.Rd
 7ead5f4aa2747f9d205ca1ae607e0039 *man/summary.two.sample.test.Rd
 ac295ac9bbfac7cb6b569e3261647a34 *man/twenty.Rd
-8a393fe3947ec206f5799c64f7dfdf86 *man/two.sample.test.Rd
+07fb99bffa638fd141a729ad7dd96f1a *man/two.sample.test.Rd
 092f3f5681652f8c1dafc382cc48222b *man/unicef.Rd
 68f5cd2c93a64e5a778e3117071e702e *man/us1940.Rd
 24aa275d3c82bab40c5f603011198ca6 *man/water.Rd
@@ -88,5 +88,5 @@ f069be0cb386702688bfb3911c09830e *R_scripts/bio532.rscript.3.loading.data.R
 883a912a55f87e986a666843d10b5f0e *R/confidence.int.r
 30077a06dd81af3a537b63213c074d48 *R/multisample.r
 adca70bb6202fda2f305979e80438c5d *R/support.code.r
-c8c97408db738efdda6a9bba8e283533 *R/two.sample.test.r
-6239fdaf85fd84befe07622c560687bf *R/utils.r
+03cce10a250d271712800d8842c5a499 *R/two.sample.test.r
+69ec17b9437105e6cca86f0a477c771e *R/utils.r
