@@ -216,7 +216,7 @@ print.two.sample.test <- function (x, ...) {
   cat("\n")
   cat(paste((1-alpha)*100, "% Confidence interval, two-tailed:\n"))
   print(x$conf.int.two.tail)
-  cat("\n")
+  cat("\n\n")
   cat("Confidence Intervals, based on t-distribution (Welch method)\n\n")
   cat(paste(round(v,3), "degrees of freedom\n\n"))
   cat(paste((1-alpha)*100, "% Confidence interval, less than or equal to observed:\n"))  
@@ -301,7 +301,7 @@ plot.two.sample.test <- function(x, method = c("histogram", "diagnostic"),
     if(is.null(breaks) & iter > 500)  breaks <- 50 
     if(is.null(cols)) cols <- rgb(0,1,0,0.5)
     par(mfcol=c(1,2))
-    hist(y, breaks=breaks, col=cols, main=expression(paste(mu," marked by blue line")),
+    hist(c(mu,y), breaks=breaks, col=cols, main=expression(paste(mu," marked by blue line")),
          xlab = "Random mean differences (null model)", cex.main = 0.7)
     abline(v = mu, lwd=3, col="dark blue")
     abline(v = lcl, lwd=2, lty=3, col="red")
