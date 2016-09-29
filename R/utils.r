@@ -318,8 +318,8 @@ plot.two.sample.test <- function(x, method = c("histogram", "diagnostic"),
     } else {
       lcp <- alpha/2; ucp <- 1-alpha/2
     }
-    lclp <- qt(lcp, v)
-    uclp <- qt(ucp, v)
+    lclp <- qt(lcp, df)
+    uclp <- qt(ucp, df)
     abline(v = lclp, lwd=2, lty=3, col="red")
     abline(v = uclp, lwd=2, lty=3, col="red")
     abline(v = ts[1], lwd=3, col="dark orange")
