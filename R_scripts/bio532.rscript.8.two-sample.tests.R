@@ -146,9 +146,9 @@ x <- as.factor(c(rep(0,7), rep(1,7)))
 
 cigData <- data.frame(y=y, x=x)
 
-# null hypothesis, H0: muf - mum = 0
-# alternative hypothesis, HA: muf - mum != 0
-# alpha = 0.05 (standard), two tailed test (use alpha/2)
+# null hypothesis, H0: mu12 - mu24 = 0
+# alternative hypothesis, HA: mu12 - mu24 > 0
+# alpha = 0.05 (standard), one tailed test (positive tail)
 
 TST3 <- two.sample.test(y~x, data = cigData, alpha = 0.05, mu = 0)
 summary(TST3)
@@ -178,6 +178,10 @@ plot(TST3, conf.int = "PT")
 
 
 # This is a paired design!
+
+# null hypothesis, H0: mu(d) = 0
+# alternative hypothesis, HA: mu(d) > 0
+# alpha = 0.05 (standard), one tailed test (positive tail)
 
 d <- y12 - y24
 ci.d <- confidence.int(d, alpha = 0.05)
