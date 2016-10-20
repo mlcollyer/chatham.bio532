@@ -94,6 +94,7 @@ f069be0cb386702688bfb3911c09830e *R_scripts/bio532.rscript.3.loading.data.R
 09b7eac1af284ca8702a415313b2b921 *R_scripts/bio532.rscript.6.confidence.intervals.R
 7fabe104f50508ca7f98a3fee8de3380 *R_scripts/bio532.rscript.7.confidence.intervals2.R
 a818d8fcbc666b69ae34cf3c8da713a3 *R_scripts/bio532.rscript.8.two-sample.tests.R
+a444fd7d109c08f05b04f36fc8e864a5 *R_scripts/bio532.rscript.9.ANOVA.R
 39464d1579792c168ef20aa9a9054266 *R/ANOVA.R
 883a912a55f87e986a666843d10b5f0e *R/confidence.int.r
 30077a06dd81af3a537b63213c074d48 *R/multisample.r
