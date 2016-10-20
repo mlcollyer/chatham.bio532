@@ -325,3 +325,132 @@ plot.two.sample.test <- function(x, method = c("histogram", "diagnostic"),
     abline(v = ts[1], lwd=3, col="dark orange")
   }
 }
+
+
+## ANOVA
+
+#' Print/Summary Function for chantahm.bio532
+#' 
+#' @param x print/summary object (from \code{\link{ANOVA}})
+#' @param ... other arguments passed to print/summary
+#' @export
+#' @author Michael Collyer
+#' @keywords utilities
+print.ANOVA <- function (x, ...) {
+  geomorph:::print.procD.lm(x,...)
+}
+
+#' Print/Summary Function for chatham.bio532
+#' 
+#' @param object print/summary object (from \code{\link{ANOVA}})
+#' @param ... other arguments passed to print/summary
+#' @export
+#' @author Michael Collyer
+#' @keywords utilities
+summary.ANOVA<- function(object,...) print.ANOVA(object,...)
+
+#' Plot Function for chatham.bio532
+#' 
+#' @param x plot object (from \code{\link{ANOVA}})
+#' @param method Whether to plot histograms of test statistic distributions or linear model diagnostics
+#' @param ... other arguments passed to plot (see hist)
+#' @export
+#' @author Michael Collyer
+#' @keywords utilities
+#' @keywords visualization
+plot.ANOVA <- function(x, method = c("histogram", "diagnostic"),
+                                ...){
+  method <- match.arg(method)
+  if(method == "diagnostic") {
+    form <- x$call[-2]
+    form <- update(form, Y ~.)
+    plot(lm(form, data = x$data))
+    } else {
+    dots <- list(...)
+    cols <- dots$col
+    breaks <- dots$breaks
+    SSr <- x$random.SS
+    SSY <- sum(scale(x$Y, scale = FALSE)^2)
+    if(is.matrix(SSr)) SSEr <- SSY-colSums(SSr) else SSEr <- SSY-SSr
+    Df <- x$df
+    Df <- Df[-length(Df)]
+    Dfe <- Df[length(Df)]
+    k <- length(Df) - 1
+    findF <- function(x, sse, df){
+      MSF <- x/df[1]
+      MSE <- sse/df[2]
+      MSF/MSE
+    }
+    if(is.null(breaks)) {
+      if(x$permutations >= 1000) breaks = 50 else 
+        if(x$permutations >= 500) breaks = 25 else
+          breaks = NULL
+    }
+    if(is.null(cols)) cols = rgb(0.2,1,0.8,0.7)
+    par(mfcol=c(k,1))
+    for(i in 1:k){
+      d <- Df[i]
+      if(is.matrix(SSr)) s <- SSr[i,] else s <- SSr
+      if(is.matrix(SSEr)) sse <- SSEr[i,] else sse <- SSEr
+      Fs <- findF(s, sse, c(d, Dfe))
+      hist(Fs, freq = FALSE, col=cols, breaks= breaks,
+           xlab = "Random F value", main = x$term.labels[i])
+      xx <- seq(0, max(Fs), 0.1)
+      dy <- df(xx, d, Dfe)
+      points(xx, dy, type = "l", lwd=2, col="red")
+      abline(v=Fs[1], lwd=3, col="dark orange")
+    }
+  }
+}
+
+## pairwise.means.test
+
+#' Print/Summary Function for chantahm.bio532
+#' 
+#' @param x print/summary object (from \code{\link{pairwise.means.test}})
+#' @param ... other arguments passed to print/summary
+#' @export
+#' @author Michael Collyer
+#' @keywords utilities
+print.pairwise.means.test <- function (x, ...) {
+  tab <- x$table
+  alpha <- x$alpha
+  cat("\n\n")
+  cat(paste((1-alpha)*100, "% Confidence intervals for pairwise differences in means\n\n"))
+  print(tab)
+}
+
+#' Print/Summary Function for chatham.bio532
+#' 
+#' @param object print/summary object (from \code{\link{pairwise.means.test}})
+#' @param ... other arguments passed to print/summary
+#' @export
+#' @author Michael Collyer
+#' @keywords utilities
+summary.pairwise.means.test<- function(object,...) print.pairwise.means.test(object,...)
+
+#' Plot Function for chatham.bio532
+#' 
+#' @param x plot object (from \code{\link{pairwise.means.test}})
+#' @param ... other arguments passed to plot
+#' @export
+#' @author Michael Collyer
+#' @keywords utilities
+#' @keywords visualization
+plot.pairwise.means.test <- function(x, ...){
+  tab <- x$table
+  alpha <- x$alpha
+  variable <- x$variable
+  fac <- as.factor(rownames(tab))
+  md <- tab[,1]
+  pmax <- max(tab); pmin <- min(tab)
+  plot(fac, md, pch=19, cex=1.5,
+       main = paste((1-alpha)*100, "% Confidence Intervals"),
+       ylim=c(pmin,pmax), ylab=variable)
+  abline(h=0)
+  for(i in 1:length(fac)){
+    arrows(i,md[i],i,tab[i,2], angle=90)
+    arrows(i,md[i],i,tab[i,3], angle=90)
+  }
+}
+                       

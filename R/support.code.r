@@ -13,6 +13,7 @@
 #' 
 #' @section chatham.bio532 TOC:
 #' chatham.bio532-package
+#' @import geomorph
 NULL
 
 #' actions data from Pagano and Gauvreau 
