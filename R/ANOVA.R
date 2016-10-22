@@ -27,7 +27,7 @@
 
 ANOVA <- function(f, data = NULL, iter = 999, seed = NULL){
   form <- as.formula(f)
-  fit <- procD.lm(form, data = data, seed=seed)
+  fit <- procD.lm(form, data = data, seed=seed, iter=iter, RRPP=TRUE)
   fit$call <- form
   fit$seed <- seed
   class(fit) <- "ANOVA"
