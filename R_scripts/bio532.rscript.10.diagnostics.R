@@ -44,7 +44,7 @@ plot(ANOVA1)
 
 # Another example
 data("lowbwt")
-lowbwt$sex <- as.factor(sex)
+lowbwt$sex <- as.factor(lowbwt$sex)
 lowbwt$tox <- as.factor(tox)
 
 ANOVA2 <- aov(sbp ~ sex, data = lowbwt)
