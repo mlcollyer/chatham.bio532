@@ -87,7 +87,8 @@ ac295ac9bbfac7cb6b569e3261647a34 *man/twenty.Rd
 24aa275d3c82bab40c5f603011198ca6 *man/water.Rd
 c1ebd6f5318c370d314900d2a6bd8b87 *NAMESPACE
 23a8838fa46bcea01d2da6da37fe9c83 *R_scripts/bio532.rscript.1.introduction.to.R
-9d52f9f3ae6a8609144235083c8e5538 *R_scripts/bio532.rscript.10.diagnostics.R
+c43c6dad6a880e96e6a56a209fb6530d *R_scripts/bio532.rscript.10.diagnostics.R
+9a2bfc105aca47480a6da0829200b1f0 *R_scripts/bio532.rscript.11.non.parametric.tests.R
 d381f62c83a8abaf34fc7106491125d2 *R_scripts/bio532.rscript.2.install.packages.R
 f069be0cb386702688bfb3911c09830e *R_scripts/bio532.rscript.3.loading.data.R
 1cbafc2b6c1a0cea1ad04c1899584387 *R_scripts/bio532.rscript.4.probability.distributions.R
