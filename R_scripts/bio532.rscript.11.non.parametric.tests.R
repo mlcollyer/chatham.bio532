@@ -32,6 +32,9 @@ confidence.int(CF-healthy)
 
 # sign test: there is no built in test, but easy to do by hand
 
+binom.test(11, 13, 0.5, alternative = "greater")
+
+# by hand
 signs <- sign(CF-healthy)
 
 # number positives
