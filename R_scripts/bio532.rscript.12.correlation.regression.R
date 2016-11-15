@@ -207,7 +207,7 @@ sum(d^2)
 # independent avriable (probably silly, but just to demonstrate)
 
 b = SC/SSX
-a = b*x.bar - y.bar
+a = y.bar - b*x.bar 
 
 a # intercept
 b # slope
@@ -285,3 +285,23 @@ plot(fit3)
 
 # Note that Spearman correlation, a randomization ANOVA, and log-
 # transformation all ended up with similar conclusions
+
+# --------------------------------------------------------------------------------
+
+# Note on plotting
+
+plot(CL, TL, pch = 19)
+
+# add line described intercept and slope
+
+abline(a, b, col="red")
+
+# or a short-cut, if one already has a least-squares fit from lm
+
+plot(CL, TL, pch = 19)
+abline(fit, col = "green")
+
+# Also
+
+plot(log(CL), log(TL), pch=23, bg = "dark red")
+abline(fit3, col = "dark blue")
