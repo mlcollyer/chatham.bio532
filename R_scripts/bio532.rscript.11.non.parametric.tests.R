@@ -95,9 +95,11 @@ sum(signs[signs == -1])
 pbinom(q = 3, size = 14, prob = 0.5)
 pbinom(q = 10, size = 14, prob = 0.5, lower.tail = FALSE)
 
+binom.test(x=11, n=14, p=0.5, alternative="greater")
+
 # Wilcoxon signed rank test
 
-wilcox.test(placebo, drug, paired = TRUE, data = REE, alternative = "greater")
+wilcox.test(placebo, drug, paired = TRUE, data = FVC, alternative = "greater")
 
 #-------------------------------------------------------------------------------
 
@@ -148,14 +150,14 @@ by(rank(mMA), exposure, sum) - ns*(ns+1)/2
 
 kruskal.test(mMA ~ exposure, data = phenyl)
 
-# Don't worry about how Chi-square is calculated, but realize it can be done with 
+   # Don't worry about how Chi-square is calculated, but realize it can be done with 
 # 2+ groups
 
 
 # RECOMMENDED PARADIGM 
 
 # What is the central question?  Do I need to know means?
-# Is it possible to use a resampling prcoedure?  Can I do this with a computer?
+# Is it possible to use a resampling procedure?  Can I do this with a computer?
 # If I wish to use a parametric test, do my data meet assumptions?
 # Would a transformation help for parametric tests, if this is what I prefer?
 # Can I change the data to ranks or just measure - or + outcomes, without losing
