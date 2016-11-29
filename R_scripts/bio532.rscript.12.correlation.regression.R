@@ -27,7 +27,7 @@ HGC <- data.frame(CL, TL)
 # 5.a two-way scatterplot
 
 plot(CL, TL)
-plot(CL, TL, pch = 19)
+plot(CL, TL, pch = 19, col="yellow")
 plot(CL, TL, pch = 20)
 plot(CL, TL, pch = 21)
 plot(CL, TL, pch = 21, bg = "yellow")
